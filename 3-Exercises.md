@@ -1,5 +1,9 @@
 # Exercises
 
+The following exercises are by no means comprehensive, but meant to give you some practice putting together the concepts from this section.
+
+For more exercises, [Part One](http://www.ccs.neu.edu/home/matthias/HtDP2e/part_one.html) of [How to Design Programs, Second Edition](http://www.ccs.neu.edu/home/matthias/HtDP2e/) is excellent.
+
 ## Exercise 0
 
 Consider the following functions, `even?` and `and`:
