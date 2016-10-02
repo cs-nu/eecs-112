@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "prism",
+    "-highlight",
+    "katex"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+   "prism": {
+      "css": [
+        "prismjs/themes/prism.css"
+      ]
+    }
+  }
+}
