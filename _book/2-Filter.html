@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Introduction · GitBook</title>
+        <title>filter · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -63,8 +63,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0-Evaluation.html" />
     
+    <link rel="prev" href="2-Map.html" />
     
 
     </head>
@@ -93,7 +93,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -234,7 +234,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="2-Filter.html">
+        <li class="chapter active" data-level="4.3" data-path="2-Filter.html">
             
                 <a href="2-Filter.html">
             
@@ -279,7 +279,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >filter</a>
     </h1>
 </div>
 
@@ -294,31 +294,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eecs-111">EECS 111</h1><p>These are recitation notes for EECS 111, Fall 2016 at Northwestern University. These notes are not comprehensive. I generally only post notes for particularly important or confusing topics.</p><p>Recitation is held <strong>every Sunday</strong> at <strong>7:00pm</strong> in <strong>Tech LR4</strong>. It is entirely optional, directed at first-time programmers, and structured as a mini-lecture with ample time for questions.</p><h2 id="agenda">Agenda</h2><table>
+                                <h1 id="filter"><code>filter</code></h1><p>The <code>filter</code> function allows us to <strong>filter out elements of a list that don&apos;t match a given criteria</strong>.</p><p>It takes two inputs:</p><ol><li>A <strong>predicate function</strong>, i.e. a function that returns a boolean, and
+</li>
+<li>A <strong>list of elements</strong> to filter according to the predicate.
+</li></ol>
+<p>It returns a subset of the original list, consisting of <em>only those elements for which the predicate returned <code>true</code></em>.</p><pre><code class="lang-scheme">filter : <span class="token punctuation">(</span><span class="token function">X</span> -&gt; boolean<span class="token punctuation">)</span>, <span class="token punctuation">(</span><span class="token function">listof</span> X<span class="token punctuation">)</span> -&gt; <span class="token punctuation">(</span><span class="token function">listof</span> X<span class="token punctuation">)</span></code></pre>
+<h2 id="example">Example</h2><p>Suppose we have the following list of numbers:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token builtin">list</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">5</span><span class="token punctuation">)</span></code></pre>
+<p>and we want to get all the odd numbers from this list. In other words, we want to <em>filter the list to keep the odd numbers</em>.</p><p>We know that the <code>odd?</code> predicate tells us whether a single number is odd. We can scale this function using <code>filter</code> on a list of numbers, to give us only the odd elements of the list.</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">filter</span> odd? <span class="token punctuation">(</span><span class="token builtin">list</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">; (list 1 5)</span></code></pre>
+<table>
 <thead>
-<tr><th>Date</th>
-<th>Topics</th>
-<th><code>.rkt</code></th>
+<tr><th>Item</th>
+<th>Current Step</th>
+<th>Result So Far</th>
 </tr></thead><tbody>
-<tr><td>October 2</td>
-<td>Program Evaluation, Types, Function Signatures</td>
-<td></td>
-</tr><tr><td>October 9</td>
-<td>Lambda, <code>local</code>, Conditionals</td>
-<td><a href="rkt/recitation-1.rkt">.rkt file</a></td>
-</tr><tr><td>October 16</td>
-<td>Structs, Lists, <code>map</code> and <code>filter</code>, Lambda Abstractions</td>
-<td><a href="rkt/map-filter-examples.rkt">.rkt file</a></td>
-</tr><tr><td>October 23</td>
-<td>Quiz 1 Review</td>
-<td></td>
+<tr><td><code>1</code></td>
+<td><code>(odd? 1) = true</code></td>
+<td><code>(list 1)</code></td>
+</tr><tr><td><code>2</code></td>
+<td><code>(odd? 2) = false</code></td>
+<td><code>(list 1)</code></td>
+</tr><tr><td><code>4</code></td>
+<td><code>(odd? 4) = false</code></td>
+<td><code>(list 1)</code></td>
+</tr><tr><td><code>5</code></td>
+<td><code>(odd? 5) = true</code></td>
+<td><code>(list 1 5)</code></td>
 </tr></tbody></table>
 
-<h2 id="contact">Contact</h2><p>If you have questions about anything in these notes, contact Sarah Lim (slim [punctuation] u.northwestern [punctuation] edu).</p><p>I&apos;m committed to making recitation and these notes accessible for all students enrolled in the course. If you need an accommodation, don&apos;t hesitate to let me know.</p><p>My office hours are <strong>2:00-3:00pm</strong> in the Ford 2nd Floor Lounge (southeast corner of the building), or by appointment.</p><p>I will be out of town and unable to make office hours on the following dates:</p><ul><li>Thursday, 10/20
-</li>
-<li>Thursday, 11/17
-</li></ul>
-
+<p><a href="rkt/map-filter-examples.rkt">Here</a> are more examples from recitation. This file is best viewed in DrRacket, but if you don&apos;t have it installed there is an online copy viewable <a href="https://gist.github.com/sarahlim/418c4e57b8ae4e0a4494215e9e680a81" target="_blank">here</a>.</p>
                                 
                                 </section>
                             
@@ -345,10 +349,10 @@
 
             
                 
-                
-                <a href="0-Evaluation.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Program Evaluation">
-                    <i class="fa fa-angle-right"></i>
+                <a href="2-Map.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: map">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -357,7 +361,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Program Evaluation","level":"2.1","depth":1,"path":"0-Evaluation.md","ref":"0-Evaluation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-10-17T04:46:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"filter","level":"4.3","depth":1,"previous":{"title":"map","level":"4.2","depth":1,"path":"2-Map.md","ref":"2-Map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2-Filter.md","mtime":"2016-10-17T04:35:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

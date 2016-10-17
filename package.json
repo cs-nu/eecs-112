@@ -1,0 +1,26 @@
+{
+  "name": "eecs-111",
+  "version": "0.0.1",
+  "description": "recitation notes for eecs 111, fall 2016",
+  "dependencies": {
+    "gitbook-plugin-katex": "^1.1.3",
+    "gitbook-plugin-prism": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "prepare": "gitbook install",
+    "watch": "npm run prepare && gitbook serve",
+    "build": "npm run prepare && rm -rf _book && gitbook build",
+    "publish": "npm run build && cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add . && git commit -am 'Update docs' && git push https://github.com/sarahlim/eecs-111 gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahlim/eecs-111.git"
+  },
+  "author": "Sarah Lim <sarah@sarahlim.com> (http://sarahlim.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahlim/eecs-111/issues"
+  },
+  "homepage": "https://github.com/sarahlim/eecs-111#readme"
+}

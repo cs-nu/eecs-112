@@ -63,7 +63,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2-Signatures.html" />
+    <link rel="next" href="0-Signatures.html" />
     
     
     <link rel="prev" href="0-Evaluation.html" />
@@ -113,7 +113,7 @@
 
     
         
-        <li class="header">Thinking in Racket</li>
+        <li class="header">Recitation 0</li>
         
         
     
@@ -132,9 +132,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="1-Types.html">
+        <li class="chapter active" data-level="2.2" data-path="0-Types.html">
             
-                <a href="1-Types.html">
+                <a href="0-Types.html">
             
                     
                         <b>2.2.</b>
@@ -147,9 +147,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="2-Signatures.html">
+        <li class="chapter " data-level="2.3" data-path="0-Signatures.html">
             
-                <a href="2-Signatures.html">
+                <a href="0-Signatures.html">
             
                     
                         <b>2.3.</b>
@@ -162,14 +162,88 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="3-Exercises.html">
+        <li class="chapter " data-level="2.4" data-path="0-Exercises.html">
             
-                <a href="3-Exercises.html">
+                <a href="0-Exercises.html">
             
                     
                         <b>2.4.</b>
                     
                     Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Recitation 1</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="1-Lambda.html">
+            
+                <a href="1-Lambda.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Defining Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Recitation 2</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="2-Structs-Lists.html">
+            
+                <a href="2-Structs-Lists.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Structs and Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="2-Map.html">
+            
+                <a href="2-Map.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="2-Filter.html">
+            
+                <a href="2-Filter.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    filter
             
                 </a>
             
@@ -222,7 +296,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="types-and-function-signatures">Types and Function Signatures</h1><p>Although most of the code we&apos;ve seen involves numbers, Racket is a programming language for working with all kinds of data (otherwise it would just be a glorified calculator).</p><p>Computer scientists refer to different forms of data as different <strong>types</strong>.</p><p>Here are some of the basic types in Racket, along with examples of function usage for each.</p><h3 id="numbers">Numbers</h3><p>Numbers are regular old numbers. They can be positive or negative, rational or irrational. In this course, you&apos;ll generally be working with the integers.</p><ul><li><code>10</code>
+                                <h1 id="types">Types</h1><p>Although most of the code we&apos;ve seen involves numbers, Racket is a programming language for working with all kinds of data (otherwise it would just be a glorified calculator).</p><p>Computer scientists refer to different forms of data as different <strong>types</strong>.</p><p>Here are some of the basic types in Racket, along with examples of function usage for each.</p><h3 id="numbers">Numbers</h3><p>Numbers are regular old numbers. They can be positive or negative, rational or irrational. In this course, you&apos;ll generally be working with the integers.</p><ul><li><code>10</code>
 </li>
 <li><code>-10</code>
 </li>
@@ -276,7 +350,20 @@ false</code></pre>
 
 &gt; <span class="token punctuation">(</span><span class="token function">overlay</span> <span class="token punctuation">(</span><span class="token function">circle</span> <span class="token number">10</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token function">circle</span> <span class="token number">20</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p><img alt="red circle overlaid on blue circle" src="https://cloudup.com/c5LGdRMHDuU+"></p><pre><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token function">rotate</span> <span class="token number">45</span> <span class="token punctuation">(</span><span class="token function">ellipse</span> <span class="token number">60</span> <span class="token number">20</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<p><img alt="green ellipse rotated 45 degrees" src="https://cloudup.com/cuyXSaNR_C1+"></p>
+<p><img alt="green ellipse rotated 45 degrees" src="https://cloudup.com/cuyXSaNR_C1+"></p><h2 id="defining-constants">Defining Constants</h2><p>We can define <strong>constants</strong> to simplify our programs. Constants are like variables, except their values can&apos;t be changed in the middle of a program.</p><p>The syntax for defining a constant is:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token keyword">define</span> constant-name constant-value<span class="token punctuation">)</span></code></pre>
+<p>where <code>constant-name</code> is usually capitalized, by convention, and <code>nstant-value</code> is any expression or literal data type we&apos;ve already seen.</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">require</span> 2htdp/image<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token keyword">define</span> WIDTH <span class="token number">30</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token keyword">define</span> HEIGHT <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">9</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token keyword">define</span> LAST-NAME <span class="token string">&quot;Lim&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token keyword">define</span> BLOB <span class="token punctuation">(</span><span class="token function">circle</span> <span class="token number">50</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+&gt; <span class="token punctuation">(</span><span class="token operator">+</span> HEIGHT WIDTH<span class="token punctuation">)</span>
+<span class="token number">40</span>
+&gt; <span class="token punctuation">(</span><span class="token function">string-append</span> <span class="token string">&quot;My last name is &quot;</span> LAST-NAME<span class="token punctuation">)</span>
+<span class="token string">&quot;My last name is Lim&quot;</span>
+&gt; <span class="token punctuation">(</span><span class="token function">overlay</span> BLOB <span class="token punctuation">(</span><span class="token function">rectangle</span> <span class="token number">100</span> <span class="token number">200</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;gray&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p><img alt="red circle on a gray rectangle" src="https://cloudup.com/czBgQ8wBvgL+"></p>
                                 
                                 </section>
                             
@@ -308,7 +395,7 @@ false</code></pre>
                 </a>
                 
                 
-                <a href="2-Signatures.html" class="navigation navigation-next " aria-label="Next page: Function Signatures">
+                <a href="0-Signatures.html" class="navigation navigation-next " aria-label="Next page: Function Signatures">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -319,7 +406,7 @@ false</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Types","level":"2.2","depth":1,"next":{"title":"Function Signatures","level":"2.3","depth":1,"path":"2-Signatures.md","ref":"2-Signatures.md","articles":[]},"previous":{"title":"Program Evaluation","level":"2.1","depth":1,"path":"0-Evaluation.md","ref":"0-Evaluation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1-Types.md","mtime":"2016-10-02T21:17:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-02T21:23:10.035Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Types","level":"2.2","depth":1,"next":{"title":"Function Signatures","level":"2.3","depth":1,"path":"0-Signatures.md","ref":"0-Signatures.md","articles":[]},"previous":{"title":"Program Evaluation","level":"2.1","depth":1,"path":"0-Evaluation.md","ref":"0-Evaluation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Types.md","mtime":"2016-10-02T21:30:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

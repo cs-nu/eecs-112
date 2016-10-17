@@ -1,4 +1,4 @@
-# Types and Function Signatures
+# Types
 
 Although most of the code we've seen involves numbers, Racket is a programming language for working with all kinds of data (otherwise it would just be a glorified calculator).
 
@@ -84,3 +84,30 @@ Images are images, just like you're used to. You can generate images in DrRacket
 ```
 ![green ellipse rotated 45 degrees](https://cloudup.com/cuyXSaNR_C1+)
 
+## Defining Constants
+
+We can define **constants** to simplify our programs. Constants are like variables, except their values can't be changed in the middle of a program.
+
+The syntax for defining a constant is:
+
+```scheme
+(define constant-name constant-value)
+```
+
+where `constant-name` is usually capitalized, by convention, and `nstant-value` is any expression or literal data type we've already seen.
+
+```scheme
+(require 2htdp/image)
+
+(define WIDTH 30)
+(define HEIGHT (+ 9 1))
+(define LAST-NAME "Lim")
+(define BLOB (circle 50 "solid" "red"))
+
+> (+ HEIGHT WIDTH)
+40
+> (string-append "My last name is " LAST-NAME)
+"My last name is Lim"
+> (overlay BLOB (rectangle 100 200 "solid" "gray"))
+```
+![red circle on a gray rectangle](https://cloudup.com/czBgQ8wBvgL+)
