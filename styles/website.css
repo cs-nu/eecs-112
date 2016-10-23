@@ -5,3 +5,7 @@
   background-color: #f4f4f4;
   border-left: 3px solid #e4e4e4;
 }
+
+.markdown-section blockquote > p:last-child {
+  margin-bottom: 0;
+}

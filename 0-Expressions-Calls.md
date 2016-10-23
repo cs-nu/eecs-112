@@ -1,4 +1,4 @@
-# Program Evaluation
+# Evaluating Expressions and Function Calls
 
 By now, you should have tried evaluating some simple expressions in DrRacket. When you type some code and hit `Run`, DrRacket "thinks" for a bit, before outputting the result.
 

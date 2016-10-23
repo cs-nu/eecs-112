@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Exercises · GitBook</title>
+        <title>Function Composition · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1-Lambda.html" />
+    <link rel="next" href="0-Types.html" />
     
     
-    <link rel="prev" href="0-Signatures.html" />
+    <link rel="prev" href="0-Expressions-Calls.html" />
     
 
     </head>
@@ -132,7 +132,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+        <li class="chapter active" data-level="2.2" data-path="0-Function-Composition.html">
             
                 <a href="0-Function-Composition.html">
             
@@ -177,7 +177,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="0-Exercises.html">
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
             
                 <a href="0-Exercises.html">
             
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Exercises</a>
+        <a href="." >Function Composition</a>
     </h1>
 </div>
 
@@ -319,36 +319,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="exercises">Exercises</h1><p>The following exercises are by no means comprehensive, but meant to give you some practice putting together the concepts from this section.</p><p>For more exercises, <a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/part_one.html" target="_blank">Part One</a> of <a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/" target="_blank">How to Design Programs, Second Edition</a> is excellent.</p><h2 id="exercise-0">Exercise 0</h2><p>Consider the following functions, <code>even?</code> and <code>and</code>:</p><pre><code class="lang-scheme"><span class="token comment" spellcheck="true">; even? : number -&gt; boolean</span>
-<span class="token comment" spellcheck="true">; returns a boolean indicating whether a number is even</span>
-&gt; <span class="token punctuation">(</span><span class="token function">even?</span> <span class="token number">4</span><span class="token punctuation">)</span>
-<span class="token boolean">#t</span>rue
-&gt; <span class="token punctuation">(</span><span class="token function">even?</span> <span class="token number">5</span><span class="token punctuation">)</span>
-<span class="token boolean">#f</span>alse
+                                <h1 id="function-composition">Function Composition</h1><p>Recall that a function signature is comprised of two main parts. Everything to the <em>left</em> of the arrow <code>-&gt;</code> indicates the types of the function&apos;s arguments, and the <em>right</em> indicates the function&apos;s <strong>return type</strong>.</p><p>Thus far, we&apos;ve mostly focused on the argument types. Let&apos;s turn our attention to the return type.</p><pre><code class="lang-scheme"><span class="token comment" spellcheck="true">; number-&gt;string : number -&gt; string</span>
+&gt; <span class="token punctuation">(</span><span class="token function">number-&gt;string</span> <span class="token number">524</span><span class="token punctuation">)</span>
+<span class="token string">&quot;524&quot;</span></code></pre>
+<p>In this example, we&apos;ve used the <code>number-&gt;string</code> function to convert a number, <code>524</code>, into its string representation, <code>&quot;524&quot;</code> (remember, they are different types, and therefore different data).</p><p>Notice what happens here:</p><pre><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token function">string-append</span> <span class="token string">&quot;ted cruz&quot;</span>
+                 <span class="token number">524</span>
+                 <span class="token string">&quot;zodiac killer&quot;</span><span class="token punctuation">)</span>
+string-append: expects a string as 2nd argument, given <span class="token number">524</span>
 
-<span class="token comment" spellcheck="true">; and : boolean, boolean -&gt; boolean</span>
-<span class="token comment" spellcheck="true">; returns true if and only if both arguments are true</span>
-&gt; <span class="token punctuation">(</span><span class="token function">and</span> true true<span class="token punctuation">)</span>
-<span class="token boolean">#t</span>rue
-&gt; <span class="token punctuation">(</span><span class="token function">and</span> true false<span class="token punctuation">)</span>
-<span class="token boolean">#f</span>alse
-&gt; <span class="token punctuation">(</span><span class="token function">and</span> false false<span class="token punctuation">)</span>
-<span class="token boolean">#f</span>alse</code></pre>
-<p>Use these two functions to write an expression that returns whether <code>50</code> and <code>10</code> are <strong>both even</strong>.</p><h2 id="exercise-1">Exercise 1</h2><p>As you know, the <code>+</code> function works with any number of numbers, not just two of them:</p><pre><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span> <span class="token number">6</span><span class="token punctuation">)</span>
-<span class="token number">21</span></code></pre>
-<p>For this exercise, let&apos;s pretend we can&apos;t do that.</p><p>Write an expression to <strong>sum the integers</strong> 1 through 6, subject to the following constraint:</p><ul><li>Whenever you use <code>+</code>, you can only add <em>two numbers at a time</em>.
+&gt; <span class="token punctuation">(</span><span class="token function">string-append</span> <span class="token string">&quot;ted cruz&quot;</span>
+                 <span class="token punctuation">(</span><span class="token function">number-&gt;string</span> <span class="token number">524</span><span class="token punctuation">)</span>
+                 <span class="token string">&quot;zodiac killer&quot;</span><span class="token punctuation">)</span>
+<span class="token string">&quot;ted cruz524zodiac killer&quot;</span></code></pre>
+<p>What just happened? Let&apos;s deconstruct this in the stepper.</p><p>First, we evaluating the innermost expression. <code>(number-&gt;string 524)</code> simplifies to <code>&quot;524&quot;</code>:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">string-append</span> <span class="token string">&quot;ted cruz&quot;</span>
+               <span class="token punctuation">(</span><span class="token function">number-&gt;string</span> <span class="token number">524</span><span class="token punctuation">)</span>
+               <span class="token string">&quot;zodiac killer&quot;</span><span class="token punctuation">)</span></code></pre>
+<p>becomes</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">string-append</span> <span class="token string">&quot;ted cruz&quot;</span>
+               <span class="token string">&quot;524&quot;</span>
+               <span class="token string">&quot;zodiac killer&quot;</span><span class="token punctuation">)</span></code></pre>
+<p>Now, we can <code>string-append</code> everything together:</p><pre><code class="lang-scheme"><span class="token string">&quot;ted cruz524zodiac killer&quot;</span></code></pre>
+<p>Fair enough. Let&apos;s take a look at the function signatures for <code>number-&gt;string</code> and <code>string-append</code>:</p><ul><li><code>number-&gt;string : number -&gt; string</code>
+</li>
+<li><code>string-append : string ... -&gt; string</code>
 </li></ul>
-<p>Of course, you can use <code>+</code> itself as many times as you want.</p><h2 id="exercise-2">Exercise 2</h2><p>Write an expression to <strong>convert a number to a string, then convert the string to an image of text</strong>.</p><p>You may need to search the <code>2htdp/image</code> <a href="https://docs.racket-lang.org/teachpack/2htdpimage.html" target="_blank">documentation</a> for the <code>text</code> function.</p><h2 id="exercise-3">Exercise 3</h2><p>Consider the following expression:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">and</span> <span class="token punctuation">(</span><span class="token function">odd?</span> <span class="token number">19</span><span class="token punctuation">)</span>
-     <span class="token punctuation">(</span><span class="token operator">&gt;</span> <span class="token number">4</span>
-        <span class="token punctuation">(</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token function">string-length</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span>
-           <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<ol><li>What is the <strong>return type</strong> of this expression? How do you know?
+<p>Notice how our initial attempt fails because we&apos;ve violated the <code>string-append</code> function signature by passing in a number.</p><p>Our second try succeeds, because we first convert <code>524</code> to a string. Then, when <code>string-append</code> is called, <strong>all of its arguments are strings</strong>.</p><p>How do we know this? Because the <strong>function signature for <code>number-&gt;string</code> guarantees it will return a string</strong>.</p><p>In this sense, we can think of function signatures as &quot;contracts&quot; for function usage.</p><blockquote><p>Function signatures dictate that</p><ul><li>as long as we provide arguments of the correct type, in the correct order,
 </li>
-<li>There are five function calls in this expression. <strong>In what order</strong> are they called?
-</li>
-<li>What does this expression <strong>simplify</strong> to?
-</li></ol>
-<p>Check your answers using the DrRacket stepper. Then try writing your own complicated expression.</p>
+<li>we can <strong>count on the function to return a specific type</strong>.
+</li></ul>
+</blockquote><p>This contract, coupled with the rules for program evaluation we&apos;ve already seen, form the basis for programming in Racket. <strong>If you internalize these two things, everything in this class will make sense.</strong></p>
                                 
                                 </section>
                             
@@ -375,12 +373,12 @@
 
             
                 
-                <a href="0-Signatures.html" class="navigation navigation-prev " aria-label="Previous page: Function Signatures">
+                <a href="0-Expressions-Calls.html" class="navigation navigation-prev " aria-label="Previous page: Expressions and Function Calls">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="1-Lambda.html" class="navigation navigation-next " aria-label="Next page: Defining Functions">
+                <a href="0-Types.html" class="navigation navigation-next " aria-label="Next page: Types">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -391,7 +389,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"2.5","depth":1,"next":{"title":"Defining Functions","level":"2.6","depth":1,"path":"1-Lambda.md","ref":"1-Lambda.md","articles":[]},"previous":{"title":"Function Signatures","level":"2.4","depth":1,"path":"0-Signatures.md","ref":"0-Signatures.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Exercises.md","mtime":"2016-10-02T21:27:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-23T23:15:09.783Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function Composition","level":"2.2","depth":1,"next":{"title":"Types","level":"2.3","depth":1,"path":"0-Types.md","ref":"0-Types.md","articles":[]},"previous":{"title":"Expressions and Function Calls","level":"2.1","depth":1,"path":"0-Expressions-Calls.md","ref":"0-Expressions-Calls.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Function-Composition.md","mtime":"2016-10-23T18:57:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-23T23:15:09.783Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

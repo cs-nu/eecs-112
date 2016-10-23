@@ -63,7 +63,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0-Evaluation.html" />
+    <link rel="next" href="0-Expressions-Calls.html" />
     
     
 
@@ -111,18 +111,18 @@
 
     
         
-        <li class="header">Recitation 0</li>
+        <li class="header">Notes</li>
         
         
     
-        <li class="chapter " data-level="2.1" data-path="0-Evaluation.html">
+        <li class="chapter " data-level="2.1" data-path="0-Expressions-Calls.html">
             
-                <a href="0-Evaluation.html">
+                <a href="0-Expressions-Calls.html">
             
                     
                         <b>2.1.</b>
                     
-                    Program Evaluation
+                    Expressions and Function Calls
             
                 </a>
             
@@ -130,12 +130,27 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="0-Types.html">
+        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+            
+                <a href="0-Function-Composition.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Function Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="0-Types.html">
             
                 <a href="0-Types.html">
             
                     
-                        <b>2.2.</b>
+                        <b>2.3.</b>
                     
                     Types
             
@@ -145,12 +160,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="0-Signatures.html">
+        <li class="chapter " data-level="2.4" data-path="0-Signatures.html">
             
                 <a href="0-Signatures.html">
             
                     
-                        <b>2.3.</b>
+                        <b>2.4.</b>
                     
                     Function Signatures
             
@@ -160,12 +175,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="0-Exercises.html">
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
             
                 <a href="0-Exercises.html">
             
                     
-                        <b>2.4.</b>
+                        <b>2.5.</b>
                     
                     Exercises
             
@@ -175,19 +190,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 1</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="1-Lambda.html">
+        <li class="chapter " data-level="2.6" data-path="1-Lambda.html">
             
                 <a href="1-Lambda.html">
             
                     
-                        <b>3.1.</b>
+                        <b>2.6.</b>
                     
                     Defining Functions
             
@@ -197,19 +205,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 2</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="2-Structs-Lists.html">
+        <li class="chapter " data-level="2.7" data-path="2-Structs-Lists.html">
             
                 <a href="2-Structs-Lists.html">
             
                     
-                        <b>4.1.</b>
+                        <b>2.7.</b>
                     
                     Structs and Lists
             
@@ -219,12 +220,12 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="2-Map.html">
+        <li class="chapter " data-level="2.8" data-path="2-Map.html">
             
                 <a href="2-Map.html">
             
                     
-                        <b>4.2.</b>
+                        <b>2.8.</b>
                     
                     map
             
@@ -234,14 +235,36 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="2-Filter.html">
+        <li class="chapter " data-level="2.9" data-path="2-Filter.html">
             
                 <a href="2-Filter.html">
             
                     
-                        <b>4.3.</b>
+                        <b>2.9.</b>
                     
                     filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Review Sheets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="3-Quiz-1-Review.html">
+            
+                <a href="3-Quiz-1-Review.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Quiz 1 Review
             
                 </a>
             
@@ -294,7 +317,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eecs-111">EECS 111</h1><p>These are recitation notes for EECS 111, Fall 2016 at Northwestern University. These notes are not comprehensive. I generally only post notes for particularly important or confusing topics.</p><p>Recitation is held <strong>every Sunday</strong> at <strong>7:00pm</strong> in <strong>Tech LR4</strong>. It is entirely optional, directed at first-time programmers, and structured as a mini-lecture with ample time for questions.</p><h2 id="agenda">Agenda</h2><table>
+                                <h1 id="eecs-111">EECS 111</h1><p>These are recitation notes for EECS 111, Fall 2016 at Northwestern University. Notes are <em>not</em> comprehensive, and generally only posted for particularly important or confusing topics.</p><p>Recitation is held <strong>every Sunday</strong> at <strong>7:00pm</strong> in <strong>Tech LR4</strong>. It is entirely optional, directed at first-time programmers, and structured as a mini-lecture with ample time for questions.</p><h2 id="agenda">Agenda</h2><table>
 <thead>
 <tr><th>Date</th>
 <th>Topics</th>
@@ -314,9 +337,7 @@
 <td></td>
 </tr></tbody></table>
 
-<h2 id="contact">Contact</h2><p>If you have questions about anything in these notes, contact Sarah Lim (slim [punctuation] u.northwestern [punctuation] edu).</p><p>I&apos;m committed to making recitation and these notes accessible for all students enrolled in the course. If you need an accommodation, don&apos;t hesitate to let me know.</p><p>My office hours are <strong>2:00-3:00pm</strong> in the Ford 2nd Floor Lounge (southeast corner of the building), or by appointment.</p><p>I will be out of town and unable to make office hours on the following dates:</p><ul><li>Thursday, 10/20
-</li>
-<li>Thursday, 11/17
+<h2 id="contact">Contact</h2><p>If you have questions about anything in these notes, contact Sarah Lim (slim [punctuation] u.northwestern [punctuation] edu).</p><p>Accessibility is a priority for recitation and these notes. If you need an accommodation, don&apos;t hesitate to send an email.</p><p>My office hours are <strong>2:00-3:00pm</strong> in the Ford 2nd Floor Lounge (southeast corner of the building), or by appointment.</p><p>I will be out of town and unable to make office hours on the following upcoming dates:</p><ul><li>Thursday, 11/17
 </li></ul>
 
                                 
@@ -346,7 +367,7 @@
             
                 
                 
-                <a href="0-Evaluation.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Program Evaluation">
+                <a href="0-Expressions-Calls.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Expressions and Function Calls">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -357,7 +378,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Program Evaluation","level":"2.1","depth":1,"path":"0-Evaluation.md","ref":"0-Evaluation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-10-17T04:46:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Expressions and Function Calls","level":"2.1","depth":1,"path":"0-Expressions-Calls.md","ref":"0-Expressions-Calls.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-10-23T22:59:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-23T23:15:09.783Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

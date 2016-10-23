@@ -7,7 +7,7 @@ Thus far, we've only worked with simple data objects, such as strings or numbers
 A **struct** is like a "template" for a particular kind of data. We can define a new template using `define-struct`:
 
 ```scheme
-(define-struct <StructName> (<Field1> <Field2> ... <FieldN>))
+(define-struct <StructType> (<Field1> <Field2> ... <FieldN>))
 ```
 
 So `define-struct` takes two "chunks":
@@ -25,16 +25,16 @@ So `define-struct` takes two "chunks":
 
 When we define a new struct template, we get three new kinds of functions:
 
-1. `make-<StructName>` allows us to generate new *instances* of the struct by filling in the template fields
-2. `<StructName>?` allows us to check whether some object is an instance of the struct
-3. `<StructName>-<Field>` allows us to "reach into" an instance of the struct, and extract the value for a particular field
+1. `make-<StructType>` allows us to generate new *instances* of the struct by filling in the template fields
+2. `<StructType>?` allows us to check whether some object is an instance of the struct
+3. `<StructType>-<Field>` allows us to "reach into" an instance of the struct, and extract the value for a particular field
 
 Let's take a closer look at each of these.
 
 ### Making new instances
 
 ```scheme
-(make-<StructName> <Field1Value> <Field2Value> ... <FieldNValue>)
+(make-<StructType> <Field1Value> <Field2Value> ... <FieldNValue>)
 ```
 
 For example:
@@ -52,7 +52,7 @@ For example:
 ### Checking whether something is an instance
 
 ```scheme
-(<StructName>? <object>)
+(<StructType>? <object>)
 ```
 
 Continuing the above example (i.e. assuming we've already called `define-struct`, `make-person`, etc.)
@@ -68,7 +68,7 @@ Continuing the above example (i.e. assuming we've already called `define-struct`
 ### Accessing fields
 
 ```scheme
-(<StructName>-<Field> <struct>)
+(<StructType>-<Field> <struct>)
 ```
 
 Recalling our definition of the `person` struct:

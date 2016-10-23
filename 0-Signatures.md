@@ -84,8 +84,7 @@ Function signatures provide a much more powerful and specific way to think about
 
 We can write signatures for functions that take a fixed number of arguments:
 
-- `and : boolean, boolean -> boolean`
-- `not : boolean -> boolean`
+- `circle : number, string, string -> image`
 
 And those that take an arbitrary number of arguments:
 
@@ -99,82 +98,52 @@ And those that return a different type:
 - [`number->string : number -> string`](https://docs.racket-lang.org/htdp-langs/intermediate.html#%28def._htdp-intermediate._%28%28lib._lang%2Fhtdp-intermediate..rkt%29._number-~3estring%29%29)
 - [`string-contains? : string, string -> boolean`](https://docs.racket-lang.org/htdp-langs/intermediate.html#%28def._htdp-intermediate._%28%28lib._lang%2Fhtdp-intermediate..rkt%29._string-contains~3f%29%29)
 
-And those that take arguments of different types:
-
-- `circle : number, string, string -> image`
-
 > **On unfamiliar functions:** You may not have seen some of these functions before. Go ahead and try them out in the REPL (Interactions pane) in DrRacket to see what they do.
 > 
 > Notice that **function signatures give us guidelines for using them**. We know what inputs are valid, even though we don't know what the functions do yet!
 
-## Function Composition
+## Functions As Inputs and Outputs
 
-Recall that a function signature is comprised of two main parts. Everything to the *left* of the arrow `->` indicates the types of the function's arguments, and the *right* indicates the function's **return type**.
+In Racket, a function can *take other functions* as inputs, and *return a function* as output. These kinds of super-functions are called **higher-order functions**.
 
-Thus far, we've mostly focused on the argument types. Let's turn our attention to the return type.
+Examples of higher-order functions from class include `iterated-overlay` and `map`.
 
-```scheme
-; number->string : number -> string
-> (number->string 524)
-"524"
-```
+For instance, consider `iterated-overlay`, which takes:
 
-In this example, we've used the `number->string` function to convert a number, `524`, into its string representation, `"524"` (remember, they are different types, and therefore different data).
+- An an image-generating function, which will be repeatedly called by `iterated-overlay`
+- A number indicating the number of times to call the generating function.
 
-Notice what happens here:
+and returns an image.
 
-```scheme
-> (string-append "ted cruz"
-                 524
-                 "zodiac killer")
-string-append: expects a string as 2nd argument, given 524
-
-> (string-append "ted cruz"
-                 (number->string 524)
-                 "zodiac killer")
-"ted cruz524zodiac killer"
-```
-
-What just happened? Let's deconstruct this in the stepper.
-
-First, we evaluating the innermost expression. `(number->string 524)` simplifies to `"524"`:
+At first, we might right the signature for `iterated-overlay` like so:
 
 ```scheme
-(string-append "ted cruz"
-               (number->string 524)
-               "zodiac killer")
+iterated-overlay : function number -> image
 ```
 
-becomes
+But recall that signatures specify *contracts* for using functions, and it's not very helpful if we don't know what *type* of function to pass into `iterated-overlay`. (Calling `(iterated-overlay + 5)` will definitely not work, for instance.)
+
+So we can nest the signature for the generator function inside the signature for `iterated-overlay` like so:
 
 ```scheme
-(string-append "ted cruz"
-               "524"
-               "zodiac killer")
+iterated-overlay : (number -> image) number -> image
 ```
 
-Now, we can `string-append` everything together:
+As another example, consider the mathematical differentiation operator $$\frac{d}{dx}$$. It takes a function and returns its derivative, for example:
+
+$$
+\begin{aligned}
+\frac{d}{dx} \;{\small\begin{matrix}\\ \normalsize (2x^2 + 3x + 1) \\ ^{\small f(x)}\end{matrix} }\;
+= \;{\small\begin{matrix}\\ \normalsize 4x + 3 \\ ^{\small f'(x)}\end{matrix} }\;
+\end{aligned}
+$$
+
+In the example above, the operator $$\frac{d}{dx}$$ takes an input function, and returns an output function. Both the input and output functions themselves take a number $$x$$, and return a number $$f(x)$$.
+
+The input and output functions therefore have the signature `number -> number`.
+
+Accordingly, if we defined the `d/dx` operator for single-variable functions in Racket, its signature would look like this:
 
 ```scheme
-"ted cruz524zodiac killer"
+d/dx : (number -> number) -> (number -> number)
 ```
-
-Fair enough. Let's take a look at the function signatures for `number->string` and `string-append`:
-
-- `number->string : number -> string`
-- `string-append : string ... -> string`
-
-Notice how our initial attempt fails because we've violated the `string-append` function signature by passing in a number.
-
-Our second try succeeds, because we first convert `524` to a string. Then, when `string-append` is called, **all of its arguments are strings**.
-
-How do we know this? Because the **function signature for `number->string` guarantees it will return a string**.
-
-In this sense, we can think of function signatures as "contracts" for function usage.
-
-> Function signatures dictate that
-> 
-> - as long as we provide arguments of the correct type, in the correct order,
-> - we can **count on the function to return a specific type**.
-
-This contract, coupled with the rules for program evaluation we've already seen, form the basis for programming in Racket. **If you internalize these two things, everything in this class will make sense.**

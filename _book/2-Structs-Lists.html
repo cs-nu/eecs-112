@@ -113,18 +113,18 @@
 
     
         
-        <li class="header">Recitation 0</li>
+        <li class="header">Notes</li>
         
         
     
-        <li class="chapter " data-level="2.1" data-path="0-Evaluation.html">
+        <li class="chapter " data-level="2.1" data-path="0-Expressions-Calls.html">
             
-                <a href="0-Evaluation.html">
+                <a href="0-Expressions-Calls.html">
             
                     
                         <b>2.1.</b>
                     
-                    Program Evaluation
+                    Expressions and Function Calls
             
                 </a>
             
@@ -132,12 +132,27 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="0-Types.html">
+        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+            
+                <a href="0-Function-Composition.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Function Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="0-Types.html">
             
                 <a href="0-Types.html">
             
                     
-                        <b>2.2.</b>
+                        <b>2.3.</b>
                     
                     Types
             
@@ -147,12 +162,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="0-Signatures.html">
+        <li class="chapter " data-level="2.4" data-path="0-Signatures.html">
             
                 <a href="0-Signatures.html">
             
                     
-                        <b>2.3.</b>
+                        <b>2.4.</b>
                     
                     Function Signatures
             
@@ -162,12 +177,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="0-Exercises.html">
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
             
                 <a href="0-Exercises.html">
             
                     
-                        <b>2.4.</b>
+                        <b>2.5.</b>
                     
                     Exercises
             
@@ -177,19 +192,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 1</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="1-Lambda.html">
+        <li class="chapter " data-level="2.6" data-path="1-Lambda.html">
             
                 <a href="1-Lambda.html">
             
                     
-                        <b>3.1.</b>
+                        <b>2.6.</b>
                     
                     Defining Functions
             
@@ -199,19 +207,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 2</li>
-        
-        
-    
-        <li class="chapter active" data-level="4.1" data-path="2-Structs-Lists.html">
+        <li class="chapter active" data-level="2.7" data-path="2-Structs-Lists.html">
             
                 <a href="2-Structs-Lists.html">
             
                     
-                        <b>4.1.</b>
+                        <b>2.7.</b>
                     
                     Structs and Lists
             
@@ -221,12 +222,12 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="2-Map.html">
+        <li class="chapter " data-level="2.8" data-path="2-Map.html">
             
                 <a href="2-Map.html">
             
                     
-                        <b>4.2.</b>
+                        <b>2.8.</b>
                     
                     map
             
@@ -236,14 +237,36 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="2-Filter.html">
+        <li class="chapter " data-level="2.9" data-path="2-Filter.html">
             
                 <a href="2-Filter.html">
             
                     
-                        <b>4.3.</b>
+                        <b>2.9.</b>
                     
                     filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Review Sheets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="3-Quiz-1-Review.html">
+            
+                <a href="3-Quiz-1-Review.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Quiz 1 Review
             
                 </a>
             
@@ -296,7 +319,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="structs-and-lists">Structs and Lists</h1><p>Thus far, we&apos;ve only worked with simple data objects, such as strings or numbers. What if we want to express more complex data?</p><h2 id="structs">Structs</h2><p>A <strong>struct</strong> is like a &quot;template&quot; for a particular kind of data. We can define a new template using <code>define-struct</code>:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token keyword">define</span>-struct &lt;StructName&gt; <span class="token punctuation">(</span><span class="token operator">&lt;</span>Field1&gt; &lt;Field2&gt; ... &lt;FieldN&gt;<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+                                <h1 id="structs-and-lists">Structs and Lists</h1><p>Thus far, we&apos;ve only worked with simple data objects, such as strings or numbers. What if we want to express more complex data?</p><h2 id="structs">Structs</h2><p>A <strong>struct</strong> is like a &quot;template&quot; for a particular kind of data. We can define a new template using <code>define-struct</code>:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token keyword">define</span>-struct &lt;StructType&gt; <span class="token punctuation">(</span><span class="token operator">&lt;</span>Field1&gt; &lt;Field2&gt; ... &lt;FieldN&gt;<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>So <code>define-struct</code> takes two &quot;chunks&quot;:</p><ol><li>A <strong>name</strong> for the template/struct, and
 </li>
 <li>A parenthetical sequence of <strong>fields</strong>.
@@ -306,13 +329,13 @@
 <span class="token comment" spellcheck="true">; - first-name is a string</span>
 <span class="token comment" spellcheck="true">; - age is a number</span>
 <span class="token punctuation">(</span><span class="token keyword">define</span>-struct person <span class="token punctuation">(</span><span class="token function">last-name</span> first-name age<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<p>When we define a new struct template, we get three new kinds of functions:</p><ol><li><code>make-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructName</span><span class="token punctuation">&gt;</span></span></code> allows us to generate new <em>instances</em> of the struct by filling in the template fields
+<p>When we define a new struct template, we get three new kinds of functions:</p><ol><li><code>make-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructType</span><span class="token punctuation">&gt;</span></span></code> allows us to generate new <em>instances</em> of the struct by filling in the template fields
 </li>
-<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructName</span><span class="token punctuation">&gt;</span></span>?</code> allows us to check whether some object is an instance of the struct
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructType</span><span class="token punctuation">&gt;</span></span>?</code> allows us to check whether some object is an instance of the struct
 </li>
-<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructName</span><span class="token punctuation">&gt;</span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Field</span><span class="token punctuation">&gt;</span></span></code> allows us to &quot;reach into&quot; an instance of the struct, and extract the value for a particular field
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>StructType</span><span class="token punctuation">&gt;</span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Field</span><span class="token punctuation">&gt;</span></span></code> allows us to &quot;reach into&quot; an instance of the struct, and extract the value for a particular field
 </li></ol>
-<p>Let&apos;s take a closer look at each of these.</p><h3 id="making-new-instances">Making new instances</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">make-&lt;StructName&gt;</span> &lt;Field1Value&gt; &lt;Field2Value&gt; ... &lt;FieldNValue&gt;<span class="token punctuation">)</span></code></pre>
+<p>Let&apos;s take a closer look at each of these.</p><h3 id="making-new-instances">Making new instances</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">make-&lt;StructType&gt;</span> &lt;Field1Value&gt; &lt;Field2Value&gt; ... &lt;FieldNValue&gt;<span class="token punctuation">)</span></code></pre>
 <p>For example:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token keyword">define</span>-struct person <span class="token punctuation">(</span><span class="token function">last-name</span> first-name age<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token punctuation">(</span><span class="token function">make-person</span> <span class="token string">&quot;Lim&quot;</span> <span class="token string">&quot;Sarah&quot;</span> <span class="token number">20</span><span class="token punctuation">)</span>
@@ -320,13 +343,13 @@
 
 <span class="token comment" spellcheck="true">; We can define new constants, too</span>
 <span class="token punctuation">(</span><span class="token keyword">define</span> SLIM <span class="token punctuation">(</span><span class="token function">make-person</span> <span class="token string">&quot;Lim&quot;</span> <span class="token string">&quot;Sarah&quot;</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
-<h3 id="checking-whether-something-is-an-instance">Checking whether something is an instance</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">&lt;</span>StructName&gt;? &lt;object&gt;<span class="token punctuation">)</span></code></pre>
+<h3 id="checking-whether-something-is-an-instance">Checking whether something is an instance</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">&lt;</span>StructType&gt;? &lt;object&gt;<span class="token punctuation">)</span></code></pre>
 <p>Continuing the above example (i.e. assuming we&apos;ve already called <code>define-struct</code>, <code>make-person</code>, etc.)</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">person?</span> <span class="token punctuation">(</span><span class="token function">make-person</span> <span class="token string">&quot;Horswill&quot;</span> <span class="token string">&quot;Ian&quot;</span> <span class="token number">99</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">; true</span>
 <span class="token punctuation">(</span><span class="token function">person?</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">; false</span>
 
 <span class="token punctuation">(</span><span class="token keyword">define</span> SLIM <span class="token punctuation">(</span><span class="token function">make-person</span> <span class="token string">&quot;Lim&quot;</span> <span class="token string">&quot;Sarah&quot;</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token punctuation">(</span><span class="token function">person?</span> SLIM<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">; true</span></code></pre>
-<h3 id="accessing-fields">Accessing fields</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">&lt;</span>StructName&gt;-&lt;Field&gt; &lt;struct&gt;<span class="token punctuation">)</span></code></pre>
+<h3 id="accessing-fields">Accessing fields</h3><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">&lt;</span>StructType&gt;-&lt;Field&gt; &lt;struct&gt;<span class="token punctuation">)</span></code></pre>
 <p>Recalling our definition of the <code>person</code> struct:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token keyword">define</span>-struct person <span class="token punctuation">(</span><span class="token function">last-name</span> first-name age<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token punctuation">(</span><span class="token function">person-age</span> <span class="token punctuation">(</span><span class="token function">make-person</span> <span class="token string">&quot;Horswill&quot;</span> <span class="token string">&quot;Ian&quot;</span> <span class="token number">99</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">; 99</span>
@@ -403,7 +426,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Structs and Lists","level":"4.1","depth":1,"next":{"title":"map","level":"4.2","depth":1,"path":"2-Map.md","ref":"2-Map.md","articles":[]},"previous":{"title":"Defining Functions","level":"3.1","depth":1,"path":"1-Lambda.md","ref":"1-Lambda.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2-Structs-Lists.md","mtime":"2016-10-17T03:39:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Structs and Lists","level":"2.7","depth":1,"next":{"title":"map","level":"2.8","depth":1,"path":"2-Map.md","ref":"2-Map.md","articles":[]},"previous":{"title":"Defining Functions","level":"2.6","depth":1,"path":"1-Lambda.md","ref":"1-Lambda.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2-Structs-Lists.md","mtime":"2016-10-23T19:20:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-23T23:15:09.783Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

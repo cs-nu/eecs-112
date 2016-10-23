@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Program Evaluation · GitBook</title>
+        <title>Expressions and Function Calls · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -63,7 +63,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="0-Types.html" />
+    <link rel="next" href="0-Function-Composition.html" />
     
     
     <link rel="prev" href="./" />
@@ -113,18 +113,18 @@
 
     
         
-        <li class="header">Recitation 0</li>
+        <li class="header">Notes</li>
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="0-Evaluation.html">
+        <li class="chapter active" data-level="2.1" data-path="0-Expressions-Calls.html">
             
-                <a href="0-Evaluation.html">
+                <a href="0-Expressions-Calls.html">
             
                     
                         <b>2.1.</b>
                     
-                    Program Evaluation
+                    Expressions and Function Calls
             
                 </a>
             
@@ -132,12 +132,27 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="0-Types.html">
+        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+            
+                <a href="0-Function-Composition.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Function Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="0-Types.html">
             
                 <a href="0-Types.html">
             
                     
-                        <b>2.2.</b>
+                        <b>2.3.</b>
                     
                     Types
             
@@ -147,12 +162,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="0-Signatures.html">
+        <li class="chapter " data-level="2.4" data-path="0-Signatures.html">
             
                 <a href="0-Signatures.html">
             
                     
-                        <b>2.3.</b>
+                        <b>2.4.</b>
                     
                     Function Signatures
             
@@ -162,12 +177,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="0-Exercises.html">
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
             
                 <a href="0-Exercises.html">
             
                     
-                        <b>2.4.</b>
+                        <b>2.5.</b>
                     
                     Exercises
             
@@ -177,19 +192,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 1</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="1-Lambda.html">
+        <li class="chapter " data-level="2.6" data-path="1-Lambda.html">
             
                 <a href="1-Lambda.html">
             
                     
-                        <b>3.1.</b>
+                        <b>2.6.</b>
                     
                     Defining Functions
             
@@ -199,19 +207,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">Recitation 2</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="2-Structs-Lists.html">
+        <li class="chapter " data-level="2.7" data-path="2-Structs-Lists.html">
             
                 <a href="2-Structs-Lists.html">
             
                     
-                        <b>4.1.</b>
+                        <b>2.7.</b>
                     
                     Structs and Lists
             
@@ -221,12 +222,12 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="2-Map.html">
+        <li class="chapter " data-level="2.8" data-path="2-Map.html">
             
                 <a href="2-Map.html">
             
                     
-                        <b>4.2.</b>
+                        <b>2.8.</b>
                     
                     map
             
@@ -236,14 +237,36 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="2-Filter.html">
+        <li class="chapter " data-level="2.9" data-path="2-Filter.html">
             
                 <a href="2-Filter.html">
             
                     
-                        <b>4.3.</b>
+                        <b>2.9.</b>
                     
                     filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Review Sheets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="3-Quiz-1-Review.html">
+            
+                <a href="3-Quiz-1-Review.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Quiz 1 Review
             
                 </a>
             
@@ -281,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Program Evaluation</a>
+        <a href="." >Expressions and Function Calls</a>
     </h1>
 </div>
 
@@ -296,7 +319,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="program-evaluation">Program Evaluation</h1><p>By now, you should have tried evaluating some simple expressions in DrRacket. When you type some code and hit <code>Run</code>, DrRacket &quot;thinks&quot; for a bit, before outputting the result.</p><p>These notes are designed to help you <strong>build an intuitive mental model of what happens in the &quot;thinking&quot; stage</strong>. Program evaluation can seem overly &quot;magical&quot; if you&apos;ve never programmed before, but it turns out that Racket&apos;s evaluation process follows a set of <em>extremely simple rules</em> that follow from either intuition or grade school math.</p><p>If you haven&apos;t done so already, try using the DrRacket <strong>stepper</strong> on a nested expression like this:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+                                <h1 id="evaluating-expressions-and-function-calls">Evaluating Expressions and Function Calls</h1><p>By now, you should have tried evaluating some simple expressions in DrRacket. When you type some code and hit <code>Run</code>, DrRacket &quot;thinks&quot; for a bit, before outputting the result.</p><p>These notes are designed to help you <strong>build an intuitive mental model of what happens in the &quot;thinking&quot; stage</strong>. Program evaluation can seem overly &quot;magical&quot; if you&apos;ve never programmed before, but it turns out that Racket&apos;s evaluation process follows a set of <em>extremely simple rules</em> that follow from either intuition or grade school math.</p><p>If you haven&apos;t done so already, try using the DrRacket <strong>stepper</strong> on a nested expression like this:</p><pre><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>The stepper can be accessed by clicking the &quot;Step through&quot; button in the upper right of the definitions window. It walks you through the process of evaluating your program, step-by-step (as the name would suggest).</p><p>The rest of these notes will establish more formal guidelines for program evaluation in Racket, but it helps to have a loose idea about how things work.</p><h2 id="calling-functions">Calling Functions</h2><p><strong>Functions</strong> (also called <strong>procedures</strong>) are the bread and butter of Racket programming.</p><p>Recall that a function in math is something like this:</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">
 f(x) = x^2
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8641079999999999em;"></span><span class="strut bottom" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p><p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span> takes a single input, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>, and transforms it into another number, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>.</p><p>In Racket, we have a function called <a href="https://docs.racket-lang.org/htdp-langs/intermediate-lam.html#%28def._htdp-intermediate-lambda._%28%28lib._lang%2Fhtdp-intermediate-lambda..rkt%29._sqr%29%29" target="_blank"><code>sqr</code></a>. Just like <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span>, <code>sqr</code> takes a single input (called an <strong>argument</strong> or <strong>parameter</strong>) and returns the square of that input.</p><pre><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token function">sqr</span> <span class="token number">2</span><span class="token punctuation">)</span>
@@ -442,7 +465,7 @@ f(x, y), 1, 2.
                 </a>
                 
                 
-                <a href="0-Types.html" class="navigation navigation-next " aria-label="Next page: Types">
+                <a href="0-Function-Composition.html" class="navigation navigation-next " aria-label="Next page: Function Composition">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -453,7 +476,7 @@ f(x, y), 1, 2.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Program Evaluation","level":"2.1","depth":1,"next":{"title":"Types","level":"2.2","depth":1,"path":"0-Types.md","ref":"0-Types.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Evaluation.md","mtime":"2016-10-02T19:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T04:49:43.363Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Expressions and Function Calls","level":"2.1","depth":1,"next":{"title":"Function Composition","level":"2.2","depth":1,"path":"0-Function-Composition.md","ref":"0-Function-Composition.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Expressions-Calls.md","mtime":"2016-10-23T20:07:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-23T23:15:09.783Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
