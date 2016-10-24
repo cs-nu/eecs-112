@@ -18,4 +18,4 @@
 
 ## Review Sheets
 
-* [Quiz 1 Review](3-Quiz-1-Review.md)
+* [Quiz 1 Review](Quiz-1-Review.md)

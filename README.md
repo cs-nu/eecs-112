@@ -11,7 +11,7 @@ Recitation is held **every Sunday** at **7:00pm** in **Tech LR4**. It is entirel
 | October 2 | Program Evaluation, Types, Function Signatures | |
 | October 9 | Lambda, `local`, Conditionals | [.rkt file](./rkt/recitation-1.rkt) |
 | October 16 | Structs, Lists, `map` and `filter`, Lambda Abstractions | [.rkt file](./rkt/map-filter-examples.rkt) |
-| October 23 | Quiz 1 Review | |
+| October 23 | Quiz 1 Review | [.rkt file](./rkt/quiz-1-review.rkt) | [view online](https://gist.github.com/sarahlim/1f17cbdccabb6edf2aa700dee3da2c47) |
 
 ## Contact
 
