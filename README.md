@@ -13,6 +13,7 @@ Recitation is held **every Sunday** at **7:00pm** in **Tech LR4**. It is entirel
 | October 16 | Structs, Lists, `map` and `filter`, Lambda Abstractions | [.rkt file](./rkt/map-filter-examples.rkt) |
 | October 23 | Quiz 1 Review | [.rkt file](./rkt/quiz-1-review.rkt) or [view online](https://gist.github.com/sarahlim/1f17cbdccabb6edf2aa700dee3da2c47) |
 | October 30 | Recursion | [.rkt file](./rkt/recursion.rkt) or [view online](https://gist.github.com/sarahlim/5ee16e114c77f064e1c8bada3567df8e) |
+| November 6 | Imperative Programming | [.rkt file](./rkt/imperative-recitation.rkt) or [view online](https://gist.github.com/sarahlim/376336417edf61b504ba7b70031162b2) |
 
 ## Contact
 
