@@ -1,0 +1,545 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Expressions and Function Calls · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0-Function-Composition.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="0-Expressions-Calls.html">
+            
+                <a href="0-Expressions-Calls.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Expressions and Function Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+            
+                <a href="0-Function-Composition.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Function Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="0-Types.html">
+            
+                <a href="0-Types.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="0-Signatures.html">
+            
+                <a href="0-Signatures.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Function Signatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
+            
+                <a href="0-Exercises.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="1-Lambda.html">
+            
+                <a href="1-Lambda.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Defining Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="2-Structs-Lists.html">
+            
+                <a href="2-Structs-Lists.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Structs and Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="2-Map.html">
+            
+                <a href="2-Map.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="2-Filter.html">
+            
+                <a href="2-Filter.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Review Sheets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Quiz-1-Review.html">
+            
+                <a href="Quiz-1-Review.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Quiz 1 Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Quiz-2-Review.html">
+            
+                <a href="Quiz-2-Review.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Quiz 2 Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="6-Inheritance.html">
+            
+                <a href="6-Inheritance.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Expressions and Function Calls</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="evaluating-expressions-and-function-calls">Evaluating Expressions and Function Calls</h1><p>By now, you should have tried evaluating some simple expressions in DrRacket. When you type some code and hit <code>Run</code>, DrRacket &quot;thinks&quot; for a bit, before outputting the result.</p><p>These notes are designed to help you <strong>build an intuitive mental model of what happens in the &quot;thinking&quot; stage</strong>. Program evaluation can seem overly &quot;magical&quot; if you&apos;ve never programmed before, but it turns out that Racket&apos;s evaluation process follows a set of <em>extremely simple rules</em> that follow from either intuition or grade school math.</p><p>If you haven&apos;t done so already, try using the DrRacket <strong>stepper</strong> on a nested expression like this:</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">3</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>The stepper can be accessed by clicking the &quot;Step through&quot; button in the upper right of the definitions window. It walks you through the process of evaluating your program, step-by-step (as the name would suggest).</p><p>The rest of these notes will establish more formal guidelines for program evaluation in Racket, but it helps to have a loose idea about how things work.</p><h2 id="calling-functions">Calling Functions</h2><p><strong>Functions</strong> (also called <strong>procedures</strong>) are the bread and butter of Racket programming.</p><p>Recall that a function in math is something like this:</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">
+f(x) = x^2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8641079999999999em;"></span><span class="strut bottom" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></p><p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span> takes a single input, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>, and transforms it into another number, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>.</p><p>In Racket, we have a function called <a href="https://docs.racket-lang.org/htdp-langs/intermediate-lam.html#%28def._htdp-intermediate-lambda._%28%28lib._lang%2Fhtdp-intermediate-lambda..rkt%29._sqr%29%29" target="_blank"><code>sqr</code></a>. Just like <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span>, <code>sqr</code> takes a single input (called an <strong>argument</strong> or <strong>parameter</strong>) and returns the square of that input.</p><pre class="language-"><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token function">sqr</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token number">4</span></code></pre>
+<p>Of course, some functions in math can have multiple arguments, like</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">
+f(x, y) = 2x + y
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span></span></p><p>Similarly, Racket has functions that take multiple arguments. Consider the function <code>+</code>, which returns the sum of all of its inputs (in this regard, the Racket <code>+</code> function is a lot closer to the mathematical sum <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A3;</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A3;</span></span></span></span> than the addition operator <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">+</span></span></span></span>).</p><pre class="language-"><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token number">6</span></code></pre>
+<p>In math, we have a clear notation for applying a function to an input. You probably don&apos;t even think about this notation because it&apos;s so familiar.</p><p>Consider <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(x, y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> from above; suppose I want to evaluate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">f(1, 2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mclose">)</span></span></span></span>. Then I have, in painstaking detail,</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mi>f</mi></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">n</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">e</mi></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mo>(</mo><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mn>1</mn></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mtext>&#xA0;</mtext><mn>1</mn></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mo separator="true">,</mo><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mn>2</mn></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mtext>&#xA0;</mtext><mn>2</mn></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mo>)</mo></mrow><annotation encoding="application/x-tex">
+\;{\small\begin{matrix}\\ \normalsize f \\ ^{\small \text{name}}\end{matrix} }\;
+(
+\;{\small\begin{matrix}\\ \normalsize 1 \\ ^{\small \text{input 1}}\end{matrix} }\;
+,
+\;{\small\begin{matrix}\\ \normalsize 2 \\ ^{\small \text{input 2}}\end{matrix} }\;
+)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.845em;"></span><span class="strut bottom" style="height:3.2400000000000007em;vertical-align:-1.3950000000000007em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit sizing reset-size4 size5 displaystyle textstyle uncramped" style="margin-right:0.10764em;">f</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">name</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mopen"><span class="mspace thickspace"></span><span class="mopen">(</span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">1</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">input&#xA0;1</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mpunct"><span class="mspace thickspace"></span><span class="mpunct">,</span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">2</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">input&#xA0;2</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mclose"><span class="mspace thickspace"></span><span class="mclose">)</span></span></span></span></span></span></p><p>Likewise, Racket has a <strong>grammar</strong> for calling a function. Consider <code>(+ 1 2)</code>:</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mtext><mi mathvariant="normal">+</mi></mtext></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">n</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">e</mi></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mn>1</mn></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mtext>&#xA0;</mtext><mn>1</mn></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mspace width="0.5em"></mspace><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mn>2</mn></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mtext><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mtext>&#xA0;</mtext><mn>2</mn></mtext></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mo>)</mo></mrow><annotation encoding="application/x-tex">
+(
+\;{\small\begin{matrix}\\ \normalsize \text{+} \\ ^{\small \text{name}}\end{matrix} }\;
+\;{\small\begin{matrix}\\ \normalsize 1 \\ ^{\small \text{input 1}}\end{matrix} }\;
+\enspace
+\;{\small\begin{matrix}\\ \normalsize 2 \\ ^{\small \text{input 2}}\end{matrix} }\;
+)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.845em;"></span><span class="strut bottom" style="height:3.2400000000000007em;vertical-align:-1.3950000000000007em;"></span><span class="base displaystyle textstyle uncramped"><span class="mopen">(</span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord text displaystyle textstyle uncramped sizing reset-size4 size5 displaystyle textstyle uncramped"><span class="mord mathrm">+</span></span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">name</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">1</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">input&#xA0;1</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mspace enspace"></span><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">2</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord text scriptstyle uncramped mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathrm mtight">input&#xA0;2</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mclose"><span class="mspace thickspace"></span><span class="mclose">)</span></span></span></span></span></span></p><p>Note two differences:</p><ul><li>Parens have been moved to surround the entire function call, <em>including</em> the function name, and
+</li>
+<li>Instead of commas to separate inputs, we use spaces.
+</li></ul>
+<p>We can now summarize the syntax rules for calling a function in Racket.</p><blockquote><ol><li><strong>Opening paren</strong> <code>(</code> tells Racket <em>we are calling a function</em>;
+</li>
+<li><strong>Function name</strong>, e.g. <code>+</code>, tells Racket <em>which</em> function;
+</li>
+<li><strong>Space</strong> between function name and first input;
+</li>
+<li><strong>Inputs in order, separated by spaces</strong>;
+</li>
+<li><strong>Closing paren</strong> <code>)</code> tells Racket <em>we are done listing inputs</em>.
+</li></ol>
+</blockquote><p>Now you should know how Racket evaluates <code>(+ 3 4 5)</code>, and why we need parens around the whole thing (because <code>+</code> is a function).</p><h2 id="order-of-operations">Order of Operations</h2><p>What happens we have more complex expressions, like <code>(+ (+ 1 2) 4 5)</code>?</p><p>In grade school, you probably learned about the order of operations (perhaps you had a catchy acronym like &quot;PEMDAS&quot;). Recall that mathematical operations are &quot;ranked&quot; in precedence as follows:</p><ol><li>Parentheses,
+</li>
+<li>Exponents,
+</li>
+<li>Multiplication and division,
+</li>
+<li>Addition and subtraction.
+</li></ol>
+<p>In addition to this hierarchy of operations, there are two other properties:</p><ul><li>If a set of operations are in the same &quot;tier&quot; (e.g. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#x2217;</mo><mn>5</mn><mi mathvariant="normal">/</mi><mn>2</mn><mo>&#x2217;</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">3 * 5 / 2 * 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span><span class="mord mathrm">/</span><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">4</span></span></span></span>), evaluation proceeds from <em>left to right</em>, and
+</li>
+<li>This hierarchy applies <em>recursively</em> within parenthetical expressions -- i.e. once we&apos;re inside the first set of parens, we apply the same rules again.
+</li></ul>
+<p>Racket&apos;s order of operations is even simpler than what you learned in grade school. In fact, it includes exactly one rule:</p><ol><li>Parentheses.
+</li></ol>
+<p>Since every individual procedure call is wrapped in parentheses in Racket, we don&apos;t have to worry about operator precedence (e.g. multiplication before addition) beyond how deeply nested a procedure call is.</p><p>Above, we listed two auxiliary properties of mathematical order of operations. The same properties apply to Racket.</p><p>First, if a set of parenthetical expressions are nested at the same depth, we <strong>evaluate them from left to right</strong>. Consider the following example:</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token punctuation">(</span><span class="token operator">*</span> <span class="token number">2</span> <span class="token number">4</span><span class="token punctuation">)</span>
+   <span class="token punctuation">(</span><span class="token operator">*</span> <span class="token number">3</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>Here, <code>(* 2 4)</code> and <code>(* 3 5)</code> are nested at the same level of depth, and we evaluate them from left to right -- first <code>(* 2 4)</code>, then <code>(* 3 5)</code>.</p><p>Second, order of operation rules apply <em>recursively</em> within parentheses -- the only difference is that in Racket, parentheses are the only ordering principle (as opposed to parentheses, then exponents, etc.)</p><p>In other words, <strong>the deepest-nested expressions are simplified first</strong>, followed by the next-deepest, and so on, until you reach the outermost level of nesting.</p><p>Consider the following example:</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token number">1</span><span class="token punctuation">)</span>
+   <span class="token number">3</span>
+   <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">2</span>
+      <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">4</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token number">7</span><span class="token punctuation">)</span></code></pre>
+<p>Expressions will be evaluated in the following order:</p><ol><li><code>(+ 4 5)</code>, the most deeply nested expression
+</li>
+<li><code>(+ 1 1)</code>, going from left to right at the second level of nesting
+</li>
+<li><p><code>(+ 2 9)</code>, going from left to right at the second level of nesting</p><ul><li>Note that the <code>9</code> comes from evaluating <code>(+ 4 5)</code> in the first step
+</li></ul>
+</li>
+<li><p><code>(* 2 3 11 7)</code>, the outermost level of nesting</p><ul><li>The <code>2</code> comes from evaluating <code>(+ 1 1)</code> in the second step
+</li>
+<li>The <code>11</code> comes from evaluating <code>(+ 2 9)</code> in the third step
+</li></ul>
+</li></ol>
+<p>If this is still confusing, try running this example through the DrRacket stepper -- it is <em>much</em> easier to visualize there.</p><p>All in all, Racket evaluation can be simplified to the following two-part rule:</p><blockquote><p><strong>Evaluate parentheses first</strong> (as deeply nested as necessary), then simplify your way out, working from <strong>left to right</strong> when multiple expressions are nested at the same level.</p></blockquote><h3 id="example-designing-a-mathematical-program">Example: Designing a Mathematical Program</h3><p>Let&apos;s apply what we know about program evaluation so far, and actually design a simple program ourselves.</p><p>As we&apos;ve seen, Racket and math go hand in hand. In fact, mathematical expressions admit a straightforward representation in Racket code -- let&apos;s try that right now.</p><p>Recall the distance formula for two points, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(x_1, y_1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(x_2, y_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>:</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><msub><mi>y</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>y</mi><mn>1</mn></msub><msup><mo>)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">
+\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9838800000000001em;"></span><span class="strut bottom" style="height:1.24001em;vertical-align:-0.2561299999999999em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord sqrt"><span class="sqrt-sign" style="top:-0.09388000000000007em;"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">&#x221A;</span></span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle cramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.90388em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p><p>How do we write this in Racket?</p><p>First, we <strong>identify the operations</strong> we need, and their Racket equivalents:</p><ul><li><strong>Addition:</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>&#x21A6;</mo></mrow><annotation encoding="application/x-tex">(a + b) \mapsto</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">&#x21A6;</span></span></span></span> <code>(+ a b)</code>
+</li>
+<li><strong>Subtraction:</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo>&#x2212;</mo><mi>b</mi><mo>)</mo><mo>&#x21A6;</mo></mrow><annotation encoding="application/x-tex">(a - b) \mapsto</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">&#x2212;</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">&#x21A6;</span></span></span></span> <code>(- a b)</code>
+</li>
+<li><strong>Square:</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mi>a</mi><mn>2</mn></msup><mo>)</mo><mo>&#x21A6;</mo></mrow><annotation encoding="application/x-tex">(a^2) \mapsto</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">&#x21A6;</span></span></span></span> <code>(sqr a)</code>
+</li>
+<li><strong>Square root:</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msqrt><mrow><mi>a</mi></mrow></msqrt><mo>)</mo><mo>&#x21A6;</mo></mrow><annotation encoding="application/x-tex">(\sqrt{a}) \mapsto</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8002800000000001em;"></span><span class="strut bottom" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord sqrt"><span class="sqrt-sign" style="top:0.03971999999999998em;"><span class="style-wrap reset-textstyle textstyle uncramped">&#x221A;</span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:-0.72028em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mrel">&#x21A6;</span></span></span></span> <code>(sqrt a)</code>
+</li></ul>
+<p>Second, we think about the <strong>order in which these operations need to be applied</strong>.</p><ol><li>First we <strong>subtract</strong>: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(x_2 - x_1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>y</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>y</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(y_2 - y_1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>,
+</li>
+<li>Then we <strong>square</strong> those values,
+</li>
+<li>Then we <strong>add</strong> the squared results together, and
+</li>
+<li>Finally we <strong>square root</strong> the sum.
+</li></ol>
+<p>This gives us the <strong>order in which we need to nest Racket expressions</strong>, remembering that the outermost expression is called <em>last</em>. So we can gradually build our program up from the last step:</p><pre class="language-"><code class="lang-scheme"><span class="token comment" spellcheck="true">; Finally we square root...</span>
+<span class="token punctuation">(</span><span class="token function">sqrt</span> number<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">; ...the sum...</span>
+<span class="token punctuation">(</span><span class="token function">sqrt</span> <span class="token punctuation">(</span><span class="token operator">+</span> number
+         number<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">; ...of squared values...</span>
+<span class="token punctuation">(</span><span class="token function">sqrt</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token punctuation">(</span><span class="token function">sqr</span> number<span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token function">sqr</span> number<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">; ...of subtracted values.</span>
+<span class="token punctuation">(</span><span class="token function">sqrt</span> <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token punctuation">(</span><span class="token function">sqr</span> <span class="token punctuation">(</span><span class="token operator">-</span> x2 x1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">(</span><span class="token function">sqr</span> <span class="token punctuation">(</span><span class="token operator">-</span> y2 y1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>Notice how we use <strong>placeholders</strong> like <code>number</code> as we build our program up. Remember that all Racket programs are just nested, composed function calls, and each function call is a very simple sequence of &quot;chunks.&quot; We can use placeholders if we&apos;re not 100% sure yet what the &quot;chunks&quot; should be.</p><p>As you gain more experience with Racket, you&apos;ll be able to write expressions like this in one go, without much thought. But in general, it&apos;s very helpful to use placeholders to <strong>sketch the outline of your program</strong>, then <strong>plug in the actual expressions</strong> when you&apos;ve figured them out.</p><p>In the next section, we&apos;ll talk about Racket&apos;s <strong>type system</strong>, and see how we can design programs to transform other kinds of data, besides numbers.</p><h2 id="common-pitfalls">Common Pitfalls</h2><p>In Racket, it&apos;s important to have exactly the right number of parens in your program. Here are some common gotchas encountered by new Racketeers:</p><h3 id="forgetting-the-outermost-parentheses">Forgetting the outermost parentheses</h3><p>In math, since parentheses are mainly used to group expressions, we usually don&apos;t wrap the outermost level of an expression. We&apos;re more likely to just write</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">
+1 + 2 + 3
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mord mathrm">3</span></span></span></span></span></p><p>than</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
+(1 + 2 + 3).
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mord mathrm">3</span><span class="mclose">)</span><span class="mord mathrm">.</span></span></span></span></span></p><p>In Racket, parentheses matter because they denote the <em>start of a procedure call</em>. Racket looks for these parentheses to know when to actually evaluate a function, so if you leave them off, it just returns the same function:</p><pre class="language-"><code class="lang-scheme">&gt; + <span class="token number">1</span> <span class="token number">2</span>
++
+<span class="token number">1</span>
+<span class="token number">2</span></code></pre>
+<p>Returning to the math analogy, <code>+ 1 2</code> without enclosing parentheses is the equivalent of saying,</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
+f(x, y), 1, 2.
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mord mathrm">.</span></span></span></span></span></p><h3 id="gratuitous-parentheses">Gratuitous parentheses</h3><p>In algebra, you can add parentheses basically anywhere and it won&apos;t matter, so long as things are evaluated in the same order.</p><p>For instance, the expression <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>+</mo><mo>(</mo><mo>(</mo><mn>3</mn><mo>+</mo><mn>4</mn><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">2 + ((3 + 4))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord mathrm">3</span><span class="mbin">+</span><span class="mord mathrm">4</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span> is weird but valid.</p><p>In Racket, parens aren&apos;t just used for grouping -- as we&apos;ve belabored, parens <em>tell the computer a function is about to be called</em>. Namely, when the computer sees <code>(</code>, it thinks that <em>whatever chunk comes next is the name of the function being called</em>.</p><p>So calling <code>(+ 2 ((+ 3 4)))</code> confuses the computer. It starts by evaluating the deepest-nested expression, which is <code>(+ 3 4)</code> in this case. Now we have</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">2</span> <span class="token punctuation">(</span>7<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>and the computer sees the second <code>(</code> and thinks, &quot;okay, the next <em>chunk</em> is going to be a function name.&quot; But the next <em>chunk</em> is <code>7</code>, which is <em>not</em> the name of a function (and even if it were, the function isn&apos;t given any inputs).</p><p>So you end up with an error like this:</p><pre class="language-"><code class="lang-scheme">function call: expected a function after the open parenthesis, but received <span class="token number">7</span></code></pre>
+<p>and everyone is sad, especially you.</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0-Function-Composition.html" class="navigation navigation-next " aria-label="Next page: Function Composition">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Expressions and Function Calls","level":"2.1","depth":1,"next":{"title":"Function Composition","level":"2.2","depth":1,"path":"0-Function-Composition.md","ref":"0-Function-Composition.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Expressions-Calls.md","mtime":"2016-10-23T20:07:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-01-27T22:24:53.820Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

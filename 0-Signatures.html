@@ -1,0 +1,478 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Function Signatures · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0-Exercises.html" />
+    
+    
+    <link rel="prev" href="0-Types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="0-Expressions-Calls.html">
+            
+                <a href="0-Expressions-Calls.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Expressions and Function Calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="0-Function-Composition.html">
+            
+                <a href="0-Function-Composition.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Function Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="0-Types.html">
+            
+                <a href="0-Types.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="0-Signatures.html">
+            
+                <a href="0-Signatures.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Function Signatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="0-Exercises.html">
+            
+                <a href="0-Exercises.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="1-Lambda.html">
+            
+                <a href="1-Lambda.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    Defining Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="2-Structs-Lists.html">
+            
+                <a href="2-Structs-Lists.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Structs and Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="2-Map.html">
+            
+                <a href="2-Map.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="2-Filter.html">
+            
+                <a href="2-Filter.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Review Sheets</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Quiz-1-Review.html">
+            
+                <a href="Quiz-1-Review.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Quiz 1 Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Quiz-2-Review.html">
+            
+                <a href="Quiz-2-Review.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Quiz 2 Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="6-Inheritance.html">
+            
+                <a href="6-Inheritance.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Function Signatures</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="function-signatures-and-composition">Function Signatures and Composition</h1><p>Question: what happens if we try to do the following?</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span></code></pre>
+<p>If we try this in DrRacket, we get the following:</p><pre class="language-"><code class="lang-scheme">+: expects a number as 2nd argument, given <span class="token string">&quot;hello&quot;</span></code></pre>
+<p>Intuitively, it makes sense that this code throws an error; what does it even <em>mean</em> to add the number 1 to the word &quot;hello&quot;?</p><p>But the contents of the error message reveal something important about functions in Racket: they <strong>expect</strong> arguments to follow a <strong>certain order</strong>, and be of <strong>certain types</strong>.</p><p>Let&apos;s take a momentary diversion, and consider the game Mad Libs. If you&apos;ve never played, Mad Libs are stories with random words replaced by blanks. Each blank is labeled with a part of speech (e.g. noun, verb, person&apos;s name).</p><p>Without reading the story, players fill in the blanks with their own parts of speech. The resulting story is often humorous or nonsensical.</p><p>For example, the template</p><pre class="language-"><code>[1] Exclamation
+[2] Adjective
+[3] Noun
+
+&quot;[1]!&quot; Today is a really [2] [3]!</code></pre>
+<p>might be filled out as follows:</p><pre class="language-"><code>&quot;Ouch!&quot; Today is a really fuzzy tree!</code></pre>
+<p>Notice that although the results may be <em>nonsensical</em>, they are still <em>grammatical</em>, as long as players <em>use the correct parts of speech</em>.</p><p><strong>Racket functions are just like Mad Libs.</strong> Consider the <code>ellipse</code> function. We can write its signature like a Mad Lib:</p><pre class="language-"><code class="lang-scheme">[1] Number
+[2] Number
+[3] Mode <span class="token punctuation">(</span>String<span class="token punctuation">)</span>
+[4] Color <span class="token punctuation">(</span>String<span class="token punctuation">)</span>
+
+<span class="token punctuation">(</span><span class="token function">ellipse</span> [1] [2] [3] [4]<span class="token punctuation">)</span></code></pre>
+<p>which could be filled out as follows:</p><pre class="language-"><code class="lang-scheme"><span class="token punctuation">(</span><span class="token function">ellipse</span> <span class="token number">30</span> <span class="token number">50</span> <span class="token string">&quot;outline&quot;</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">)</span></code></pre>
+<p>Just as you can&apos;t write in a verb instead of a noun in Mad Libs, you can&apos;t pass a boolean where <code>ellipse</code> expects a number, and you can&apos;t just change around argument positions depending on how you feel that day. In other words, <strong>you can&apos;t violate a function&apos;s expectations for its arguments</strong>.</p><p>Returning to our earlier example, you can&apos;t <code>+</code> a number and a string, because <code>+</code> expects all of its arguments to be numbers:</p><pre class="language-"><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token operator">+</span> <span class="token number">1</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span>
++: expects a number as 2nd argument, given <span class="token string">&quot;hello&quot;</span></code></pre>
+<p>You also can&apos;t <code>overlay</code> an image and a boolean:</p><pre class="language-"><code class="lang-scheme">&gt; <span class="token punctuation">(</span><span class="token function">overlay</span> true
+           <span class="token punctuation">(</span><span class="token function">circle</span> <span class="token number">20</span> <span class="token string">&quot;solid&quot;</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+overlay: expects an image as first argument, given <span class="token boolean">#t</span>rue</code></pre>
+<p>We can formalize this idea using <strong>function signatures</strong>. Namely, for each function, we can define the types of each <em>argument</em>, as well as its <em>return type</em>.</p><p>Here is what a signature looks like for a function of two arguments:</p><pre class="language-"><code class="lang-scheme">function-name : arg-type-1, arg-type-2 -&gt; return-type</code></pre>
+<p>Function signatures provide a much more powerful and specific way to think about function usage and types.</p><p>We can write signatures for functions that take a fixed number of arguments:</p><ul><li><code>circle : number, string, string -&gt; image</code>
+</li></ul>
+<p>And those that take an arbitrary number of arguments:</p><ul><li><code>+ : number ... -&gt; number</code>
+</li>
+<li><code>overlay : image ... -&gt; image</code>
+</li>
+<li><code>string-append : string ... -&gt; string</code>
+</li></ul>
+<p>And those that return a different type:</p><ul><li><a href="https://docs.racket-lang.org/htdp-langs/intermediate.html#%28def._htdp-intermediate._%28%28lib._lang%2Fhtdp-intermediate..rkt%29._string-length%29%29" target="_blank"><code>string-length : string -&gt; number</code></a>
+</li>
+<li><a href="https://docs.racket-lang.org/htdp-langs/intermediate.html#%28def._htdp-intermediate._%28%28lib._lang%2Fhtdp-intermediate..rkt%29._number-~3estring%29%29" target="_blank"><code>number-&gt;string : number -&gt; string</code></a>
+</li>
+<li><a href="https://docs.racket-lang.org/htdp-langs/intermediate.html#%28def._htdp-intermediate._%28%28lib._lang%2Fhtdp-intermediate..rkt%29._string-contains~3f%29%29" target="_blank"><code>string-contains? : string, string -&gt; boolean</code></a>
+</li></ul>
+<blockquote><p><strong>On unfamiliar functions:</strong> You may not have seen some of these functions before. Go ahead and try them out in the REPL (Interactions pane) in DrRacket to see what they do.</p><p>Notice that <strong>function signatures give us guidelines for using them</strong>. We know what inputs are valid, even though we don&apos;t know what the functions do yet!</p></blockquote><h2 id="functions-as-inputs-and-outputs">Functions As Inputs and Outputs</h2><p>In Racket, a function can <em>take other functions</em> as inputs, and <em>return a function</em> as output. These kinds of super-functions are called <strong>higher-order functions</strong>.</p><p>Examples of higher-order functions from class include <code>iterated-overlay</code> and <code>map</code>.</p><p>For instance, consider <code>iterated-overlay</code>, which takes:</p><ul><li>An an image-generating function, which will be repeatedly called by <code>iterated-overlay</code>
+</li>
+<li>A number indicating the number of times to call the generating function.
+</li></ul>
+<p>and returns an image.</p><p>At first, we might right the signature for <code>iterated-overlay</code> like so:</p><pre class="language-"><code class="lang-scheme">iterated-overlay : function number -&gt; image</code></pre>
+<p>But recall that signatures specify <em>contracts</em> for using functions, and it&apos;s not very helpful if we don&apos;t know what <em>type</em> of function to pass into <code>iterated-overlay</code>. (Calling <code>(iterated-overlay + 5)</code> will definitely not work, for instance.)</p><p>So we can nest the signature for the generator function inside the signature for <code>iterated-overlay</code> like so:</p><pre class="language-"><code class="lang-scheme">iterated-overlay : <span class="token punctuation">(</span><span class="token function">number</span> -&gt; image<span class="token punctuation">)</span> number -&gt; image</code></pre>
+<p>As another example, consider the mathematical differentiation operator <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{d}{dx}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>. It takes a function and returns its derivative, for example:</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mrow><mfrac><mrow><mi>d</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mo>(</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>)</mo></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace><mo>=</mo><mspace width="0.277778em"></mspace><mrow><mstyle mathsize="0.9em"><mtable><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mstyle mathsize="1em"><mn>4</mn><mi>x</mi><mo>+</mo><mn>3</mn></mstyle></mrow></mtd></mtr><mtr><mtd><mrow><msup><mrow></mrow><mrow><mstyle mathsize="0.9em"><msup><mi>f</mi><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msup><mo>(</mo><mi>x</mi><mo>)</mo></mstyle></mrow></msup></mrow></mtd></mtr></mtable></mstyle></mrow><mspace width="0.277778em"></mspace></mrow></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+\frac{d}{dx} \;{\small\begin{matrix}\\ \normalsize (2x^2 + 3x + 1) \\ ^{\small f(x)}\end{matrix} }\;
+= \;{\small\begin{matrix}\\ \normalsize 4x + 3 \\ ^{\small f&apos;(x)}\end{matrix} }\;
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.8939544000000004em;"></span><span class="strut bottom" style="height:3.2879088000000003em;vertical-align:-1.3939544em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist"><span style="top:-0.025000000000000577em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0.9em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">d</span><span class="mord mathit">x</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2241539999999997em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.00004599999999949089em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mopen sizing reset-size4 size5 displaystyle textstyle uncramped">(</span><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">2</span><span class="mord sizing reset-size4 size5 displaystyle textstyle uncramped"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin sizing reset-size4 size5 displaystyle textstyle uncramped">+</span><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">3</span><span class="mord mathit sizing reset-size4 size5 displaystyle textstyle uncramped">x</span><span class="mbin sizing reset-size4 size5 displaystyle textstyle uncramped">+</span><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">1</span><span class="mclose sizing reset-size4 size5 displaystyle textstyle uncramped">)</span></span></span><span style="top:1.204154em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight sizing reset-size4 size4 scriptstyle uncramped" style="margin-right:0.10764em;">f</span><span class="mopen mtight sizing reset-size4 size4 scriptstyle uncramped">(</span><span class="mord mathit mtight sizing reset-size4 size4 scriptstyle uncramped">x</span><span class="mclose mtight sizing reset-size4 size4 scriptstyle uncramped">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mrel"><span class="mspace thickspace"></span><span class="mrel">=</span></span><span class="mord displaystyle textstyle uncramped"><span class="mspace thickspace"></span><span class="mord sizing reset-size5 size4 displaystyle textstyle uncramped"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2366159999999995em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:-0.03661599999999926em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">4</span><span class="mord mathit sizing reset-size4 size5 displaystyle textstyle uncramped">x</span><span class="mbin sizing reset-size4 size5 displaystyle textstyle uncramped">+</span><span class="mord mathrm sizing reset-size4 size5 displaystyle textstyle uncramped">3</span></span></span><span style="top:1.2166160000000004em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight sizing reset-size4 size4 scriptstyle uncramped"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord scriptscriptstyle uncramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen mtight sizing reset-size4 size4 scriptstyle uncramped">(</span><span class="mord mathit mtight sizing reset-size4 size4 scriptstyle uncramped">x</span><span class="mclose mtight sizing reset-size4 size4 scriptstyle uncramped">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:0.63em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size4 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="mspace thickspace"></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0.9em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></span></p><p>In the example above, the operator <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>d</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{d}{dx}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">d</span><span class="mord mathit mtight">x</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span> takes an input function, and returns an output function. Both the input and output functions themselves take a number <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>, and return a number <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>.</p><p>The input and output functions therefore have the signature <code>number -&gt; number</code>.</p><p>Accordingly, if we defined the <code>d/dx</code> operator for single-variable functions in Racket, its signature would look like this:</p><pre class="language-"><code class="lang-scheme">d/dx : <span class="token punctuation">(</span><span class="token function">number</span> -&gt; number<span class="token punctuation">)</span> -&gt; <span class="token punctuation">(</span><span class="token function">number</span> -&gt; number<span class="token punctuation">)</span></code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0-Types.html" class="navigation navigation-prev " aria-label="Previous page: Types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0-Exercises.html" class="navigation navigation-next " aria-label="Next page: Exercises">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Function Signatures","level":"2.4","depth":1,"next":{"title":"Exercises","level":"2.5","depth":1,"path":"0-Exercises.md","ref":"0-Exercises.md","articles":[]},"previous":{"title":"Types","level":"2.3","depth":1,"path":"0-Types.md","ref":"0-Types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","katex"],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"prism":{"css":["prismjs/themes/prism.css"]},"katex":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-Signatures.md","mtime":"2016-10-23T19:07:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-01-27T22:24:53.820Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
